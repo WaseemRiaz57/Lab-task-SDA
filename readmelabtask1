@@ -1,0 +1,16 @@
+Abstraction in Vehicle (Abstract Class):
+
+The Vehicle class is an abstract class that defines a common interface for all vehicles. It has two methods, start() and stop(), which are abstract in nature. In JavaScript, we simulate abstract methods by throwing errors in the base class if they are not implemented by subclasses.
+Note: In JavaScript, there’s no built-in mechanism for true abstract classes (like in other OOP languages), but we can use the above technique to enforce this pattern.
+Concrete Classes (Car and Motorcycle):
+
+The Car and Motorcycle classes are concrete implementations of the Vehicle class. They both inherit from Vehicle and provide specific implementations of the start() and stop() methods.
+This hides the details of starting and stopping the car or motorcycle from the user, providing a simple interface (start() and stop()).
+Client Code:
+
+The operateVehicle() function can operate on any object that implements the Vehicle abstraction, without knowing whether it's a car or motorcycle. The details of how each vehicle starts or stops are abstracted away from the client.
+Benefits of Abstraction:
+Hides complexity: The user of the class doesn't need to know the details of how start() or stop() are implemented. They just call the methods.
+Simplifies usage: The operateVehicle() function works with any type of vehicle that implements the Vehicle interface, so the same function can handle both cars and motorcycles.
+Flexibility: If the internal details of how a car or motorcycle starts/stops change, the user of these classes doesn't need to change anything.
+This demonstrates how abstraction allows you to define general behaviors in a way that simplifies user interaction while keeping internal implementation details hidden.
